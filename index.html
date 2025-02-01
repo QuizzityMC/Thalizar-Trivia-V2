@@ -7,6 +7,7 @@
       font-family: sans-serif;
       margin: 20px;
       background-color: #f7f7f7;
+        line-height: 1.6; /* Added for better text spacing */
     }
     h1 {
         text-align: center;
@@ -15,7 +16,9 @@
     }
     p {
       margin-bottom: 15px;
-    }
+        text-align: center; /* Center the instructional text */
+        }
+
     form {
       background-color: #fff;
       padding: 20px;
@@ -33,13 +36,15 @@
     li {
       margin-bottom: 20px;
     }
-
-    input[type="radio"] {
+   input[type="radio"] {
       margin-right: 5px;
-    }
+       transform: scale(1.2); /* Makes radio buttons slightly larger */
+   }
+
     label {
       display: inline-block;
       margin-bottom: 5px;
+          vertical-align: middle; /* Align labels with radio buttons */
     }
 
     button {
@@ -52,11 +57,36 @@
       font-size: 16px;
        display: block; /* To be on a new line */
         margin: 20px auto; /* Center horizontally */
+         width: fit-content;
     }
     button:hover {
       background-color: #4cae4c; /* Darker green */
     }
+     /* Mobile adjustments */
+    @media (max-width: 600px) {
+        body {
+            margin: 10px; /* Reduce margin on smaller screens */
+           }
 
+        form {
+             padding: 15px; /* Reduce form padding on small screens */
+         }
+        ol{
+            padding-left: 15px;
+        }
+        li{
+            margin-bottom: 15px;
+        }
+        input[type="radio"] {
+           margin-right: 3px; /* Reduced space on the side*/
+            transform: scale(1); /* Makes radio buttons slightly smaller */
+
+        }
+         label {
+        font-size: 0.95em; /* Makes labels slightly smaller on smaller screens */
+    }
+
+    }
     .correct { color: green; font-weight: bold; }
     .incorrect { color: red; font-weight: bold;}
     #results {
